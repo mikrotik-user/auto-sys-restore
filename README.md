@@ -1,7 +1,7 @@
-# Auto-Ays-Restore
+# Auto-Sys-Restore
 **This script creates restore point (binary backup file) and reverts mikrotik to this restore point in a given pediod of time unless user deactivates this script.**
 
-**How to setup an Auto-Ays-Restore script**
+**How to setup an Auto-Sys-Restore script**
 1. Download [auto-sys-restore.rsc](https://raw.githubusercontent.com/mikrotik-user/auto-sys-restore/main/auto-sys-restore.rsc) on your mikrotik router `/tool fetch url="https://raw.githubusercontent.com/mikrotik-user/auto-sys-restore/main/auto-sys-restore.rsc" mode=https dst-path=auto-sys-restore.rsc`. Also you may download [file](https://raw.githubusercontent.com/mikrotik-user/auto-sys-restore/main/auto-sys-restore.rsc) manually and upload it to router.
 2. Import script `/import auto-sys-restore.rsc`. You may also copy content of [this page](https://raw.githubusercontent.com/mikrotik-user/auto-sys-restore/main/auto-sys-restore.rsc) and paste to a newly created script using GUI.
 3. Now you may run this script via CLI. `/system script run auto-sys-restore` or directly from Winbox
