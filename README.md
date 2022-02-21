@@ -11,4 +11,5 @@
 7. If router is power cycled or reset while this script is running, configuration will be restored anyway by `auto-sys-restore-after-reboot` (another automatically created script) in 10 minutes after router was started.
 
 **Usage scenarios**
+
 If you're working on a remote mikrotik router and there's a possibility you can be kicked out from Winbox or CLI by misconfiguring management IP address or firewall rule you shoulr run `auto-sys-restore` script before making any cahnges in configuration. Once script is ran you have 10 minutes to change critical section in configuration. If everything is OK simply disarm restore script by running `no-autosys-restore`
