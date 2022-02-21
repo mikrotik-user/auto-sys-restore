@@ -38,12 +38,13 @@ add dont-require-permissions=no name=auto-sys-restore owner=admin policy=\
     s-restore script\"\\\r\
     \n\t           name=\"auto-sys-restore-after-reboot\" \\\r\
     \n\t\t       start-time=startup \\\r\
-    \n\t\t       on-event=\"/system scheduler remove [ find name=\"auto-sys-re\
-    store-in-time\" ] \\r\\n\\\r\
-    \n:delay 300 \\r\\n\\\r\
-    \n/system backup load name=\\\"\$bckpFile.backup\\\" password=\\\"\\\"\" d\
-    isabled=no } on-error={:error \"Can't create auto-sys-restore-after-reboot\
-    \_scheduler\"}\r\
+    \n\t\t       on-event=\"/system scheduler remove [ find name=\\\"auto-sys-\
+    restore-in-time\\\" ] \\r\\n\\\r\
+    \n                         :delay 300 \\r\\n\\\r\
+    \n                         /system backup load name=\\\"\$bckpFile.backup\
+    \\\" password=\\\"\\\"\" disabled=no } on-error={:error \"Can't create aut\
+    o-sys-restore-after-reboot scheduler\"}\r\
+    \n\r\
     \n:log warn ( \"auto-sys-restore: system backup restore is scheduled in \$\
     restoreTime (file: \$bckpFile.backup)\" )\r\
     \n:log warn ( \"auto-sys-restore: execute script no-autosys-restore to rem\
